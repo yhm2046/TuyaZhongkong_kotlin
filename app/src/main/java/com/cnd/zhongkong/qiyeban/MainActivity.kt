@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager=supportFragmentManager
         val transaction=fragmentManager.beginTransaction()
         transaction.replace(R.id.rightLayout,fragment)
+        transaction.addToBackStack(null)    //返回上一个fragment
         transaction.commit()
     }
 }
