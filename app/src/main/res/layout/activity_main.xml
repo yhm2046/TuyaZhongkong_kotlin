@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newsTitleLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+<!--单页模式加载一个fragment-->
     <fragment
-        android:id="@+id/leftFrag"
-        android:name="com.cnd.zhongkong.qiyeban.LeftFragment"
+        android:id="@+id/newsTitleFrag"
+        android:name="com.cnd.zhongkong.qiyeban.NewsTitleFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
 
-</LinearLayout>
+</FrameLayout>

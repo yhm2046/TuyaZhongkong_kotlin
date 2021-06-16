@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newsTitleLayout"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--屏幕宽度大于600dp设备上面加载此布局-->
+<!--屏幕宽度大于600dp设备上面加载此布局,双页面关键字newsContenFrag-->
     <fragment
-        android:id="@+id/leftFrag"
-        android:name="com.cnd.zhongkong.qiyeban.LeftFragment"
+        android:id="@+id/newsTitleFrag"
+        android:name="com.cnd.zhongkong.qiyeban.NewsTitleFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"/>
-    <fragment
-        android:id="@+id/rightFrag"
-        android:name="com.cnd.zhongkong.qiyeban.RightFragment"
+    <FrameLayout
+        android:id="@+id/newsContentLayout"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3"/>
+        android:layout_weight="3">
+        <fragment
+            android:id="@+id/newsContentFrag"
+            android:name="com.cnd.zhongkong.qiyeban.NewsContentFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
 
 
 </LinearLayout>
