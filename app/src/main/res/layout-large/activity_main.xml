@@ -7,8 +7,15 @@
     <fragment
         android:id="@+id/leftFrag"
         android:name="com.cnd.zhongkong.qiyeban.LeftFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <fragment
+        android:id="@+id/rightFrag"
+        android:name="com.cnd.zhongkong.qiyeban.RightFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
 
 
 </LinearLayout>

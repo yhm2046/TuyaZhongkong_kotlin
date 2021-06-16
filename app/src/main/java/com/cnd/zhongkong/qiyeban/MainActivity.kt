@@ -30,11 +30,11 @@ class MainActivity : AppCompatActivity() {
         }
         replaceFragment(RightFragment())
     }
-    private fun replaceFragment(fragment: Fragment){
-        val fragmentManager=supportFragmentManager
-        val transaction=fragmentManager.beginTransaction()
-        transaction.replace(R.id.rightLayout,fragment)
-        transaction.addToBackStack(null)    //返回上一个fragment
-        transaction.commit()
+    private fun replaceFragment(fragment: Fragment){    //添加限定符layout-large适配不同屏幕，以下代码需要注释
+//        val fragmentManager=supportFragmentManager
+//        val transaction=fragmentManager.beginTransaction()
+//        transaction.replace(R.id.rightLayout,fragment)
+//        transaction.addToBackStack(null)    //返回上一个fragment
+//        transaction.commit()
     }
 }
