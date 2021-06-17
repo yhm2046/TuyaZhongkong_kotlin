@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/tvLoginState"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="92dp"
         android:background="@color/design_default_color_primary"
         android:gravity="center"
@@ -23,11 +23,11 @@
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="273dp"
         android:layout_marginBottom="145dp"
         android:gravity="center"
-        android:text="二维码登录"
+        android:text="点击生成二维码登录"
         android:textSize="35dp"
         app:layout_constraintBottom_toTopOf="@+id/tvLoginState"
         app:layout_constraintEnd_toEndOf="parent"
