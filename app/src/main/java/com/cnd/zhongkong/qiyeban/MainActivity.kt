@@ -6,16 +6,17 @@ import android.util.Log
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.cnd.zhongkong.qiyeban.databinding.ActivityMainBinding
-//import kotlinx.android.synthetic.main.left_fragment.*
+import kotlinx.android.synthetic.main.left_fragment.*
 
 class MainActivity : AppCompatActivity() {
-     lateinit var btn:Button
+//     lateinit var btn:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        val binding=ActivityMainBinding.inflate(layoutInflater);
 //        setContentView(binding.root)
         setContentView(R.layout.activity_main)
-        btn=findViewById(R.id.btn_show);
+            replaceFragment(RightFragment())
+//        btn=findViewById(R.id.btn_show);
         /*
         实现动态添加fragment
         * (1) 创建待添加Fragment的实例。
@@ -24,11 +25,11 @@ class MainActivity : AppCompatActivity() {
             (4) 向容器内添加或替换Fragment，⼀般使⽤replace()⽅法实现，需要传⼊容器的id和待添加的Fragment实例。
             (5) 提交事务，调⽤commit()⽅法来完成。
         * */
-        btn.setOnClickListener {
+        btn_show.setOnClickListener {
             Log.i("XWG","click...")
             replaceFragment(AnotherRightFragment())
         }
-        replaceFragment(RightFragment())
+
     }
     private fun replaceFragment(fragment: Fragment){
         val fragmentManager=supportFragmentManager
