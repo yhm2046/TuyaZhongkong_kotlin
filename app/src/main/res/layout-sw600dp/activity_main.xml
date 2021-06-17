@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"/>
     <FrameLayout
+        android:background="@color/cardview_shadow_start_color"
         android:id="@+id/newsContentLayout"
         android:layout_width="0dp"
         android:layout_height="match_parent"
