@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_news_content.*
 import kotlinx.android.synthetic.main.news_title_frag.*
 import java.lang.StringBuilder
 
@@ -70,15 +71,14 @@ class NewsTitleFragment:Fragment() {
         val holder=ViewHolder(view)
         holder.itemView.setOnClickListener {
             val news=newsList[holder.adapterPosition]
-            if (isTwoPane){
-//                双页模式
-                val fragment=newsContentFrag as NewsContentFragment
-                fragment.refresh(news.title,news.content)
-                Log.i("xwg","shuangye.........")
-            }else{
-//                单页模式
-                NewsContentActivity.actionStart(parent.context,news.title,news.content)
-            }
+                if (isTwoPane) {
+                    // 如果是双页模式，则刷新NewsContentFragment中的内容
+                    val fragment = newsContentFrag as NewsContentFragment
+                    fragment.refresh(news.title, news.content) //刷新NewsContentFragment界面
+                } else {
+                    // 如果是单页模式，则直接启动NewsContentActivity
+                    NewsContentActivity.actionStart(parent.context, news.title, news.content);
+                }
         }
         return holder
     }

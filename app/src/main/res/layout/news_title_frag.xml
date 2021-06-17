@@ -3,7 +3,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--新闻列表布局-->
+<!--左边新闻列表布局-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/newsTitleRecyclerView"
         android:layout_width="match_parent"

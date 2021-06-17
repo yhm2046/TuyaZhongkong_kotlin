@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.news_content_frag.*
 
+/**
+ * 多页模式的fragment
+ */
 class NewsContentFragment :Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
